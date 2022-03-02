@@ -8,10 +8,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class color_selectorActivity extends Activity {
-    ImageView circle1, circle2, circle3, maincircle;
-    LinearLayout colorselect1, colorselect2, colorselect3;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.google.android.material.textfield.TextInputEditText;
+
+public class color_selectorActivity extends Activity {
+    ImageView circle1, circle2, circle3;
+    LinearLayout colorselect1, colorselect2, colorselect3;
+    private String rgb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,15 +23,13 @@ public class color_selectorActivity extends Activity {
         colorselect1 = findViewById(R.id.colorselect1);
         colorselect2 = findViewById(R.id.colorselect2);
         colorselect3 = findViewById(R.id.colorselect3);
-        maincircle = findViewById(R.id.maincircle);
-
-        circle1 = findViewById(R.id.circle2);
+        circle1 = findViewById(R.id.circle1);
         circle1.setColorFilter(Color.parseColor("#FF0000"));
         circle2 = findViewById(R.id.circle2);
         circle2.setColorFilter(Color.parseColor("#0000FF"));
         circle3 = findViewById(R.id.circle3);
         circle3.setColorFilter(Color.parseColor("#008000"));
-
+        Intent intent = new Intent("rgbEvent");
         View.OnClickListener color = new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -35,24 +37,35 @@ public class color_selectorActivity extends Activity {
                 switch (v.getId()) {
 
                     case R.id.colorselect1:
-                        maincircle.setColorFilter(Color.parseColor("#FF0000"));
+                        rgb = "#FF0000";
+                        intent.putExtra("rgb",rgb);
+                        LocalBroadcastManager.getInstance(color_selectorActivity.this).sendBroadcast(intent);
+                        finish();
                         break;
 
                     case R.id.colorselect2:
-                        maincircle.setColorFilter(Color.parseColor("#0000FF"));
+                        rgb = "#0000FF";
+                        intent.putExtra("rgb",rgb);
+                        LocalBroadcastManager.getInstance(color_selectorActivity.this).sendBroadcast(intent);
+                        finish();
                         break;
                     case R.id.colorselect3:
-                        maincircle.setColorFilter(Color.parseColor("#008000"));
+                        rgb = "#008000";
+                        intent.putExtra("rgb",rgb);
+                        LocalBroadcastManager.getInstance(color_selectorActivity.this).sendBroadcast(intent);
+                        finish();
                         break;
-                };
+                }
+                ;
+
             }
+
+
         };
 
         colorselect1.setOnClickListener(color);
         colorselect2.setOnClickListener(color);
         colorselect3.setOnClickListener(color);
-
-
 
 
     }

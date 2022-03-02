@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidteamproject">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -15,9 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidTeamProject"
         android:usesCleartextTraffic="true">
+        <receiver
+            android:name=".ColorReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".AddScheduleActivity"
             android:exported="true">
@@ -26,20 +31,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".repaet_selectorActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
-
-        </activity>
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar"></activity>
         <activity
             android:name=".color_selectorActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar"></activity>
 
-        </activity>
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="8ab011da5a2e98031529835fe03de90e" />
     </application>
+
 </manifest>

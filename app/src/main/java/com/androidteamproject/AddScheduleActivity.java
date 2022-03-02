@@ -4,9 +4,11 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Point;
@@ -21,6 +23,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -32,6 +35,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapReverseGeoCoder;
@@ -45,6 +49,8 @@ import java.util.Locale;
 public class AddScheduleActivity extends AppCompatActivity {
     LinearLayout colorselector, repeatselector;
     Calendar myCalendar = Calendar.getInstance();
+    private String getString;
+    ImageView maincircle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,15 +59,18 @@ public class AddScheduleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_addschedule);
 
         colorselector = (LinearLayout) findViewById(R.id.colorselector);
-
-
         repeatselector = (LinearLayout) findViewById(R.id.repeatselector);
-
+        Intent intent = getIntent();
+        getString = intent.getStringExtra("rgb");
+        maincircle = (ImageView) findViewById(R.id.maincircle);
 
 
         ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
         MapView mapView = new MapView(this);
         mapViewContainer.addView(mapView);
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver,
+                new IntentFilter("rgbEvent"));
 
         colorselector.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +82,7 @@ public class AddScheduleActivity extends AppCompatActivity {
         repeatselector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             startActivity(new Intent(AddScheduleActivity.this, repaet_selectorActivity.class));
+                startActivity(new Intent(AddScheduleActivity.this, repaet_selectorActivity.class));
             }
         });
 
@@ -202,7 +211,6 @@ public class AddScheduleActivity extends AppCompatActivity {
 //        종료 시간 설정 종료
 
 
-
     }
 
     private void updateStartLabel() {
@@ -220,7 +228,18 @@ public class AddScheduleActivity extends AppCompatActivity {
         EditText endDate = (EditText) findViewById(R.id.endDate);
         endDate.setText(sdf.format(myCalendar.getTime()));
     }
+    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String rgb = intent.getStringExtra("rgb");
+            maincircle.setColorFilter(Color.parseColor(rgb));
+        }
+    };
 
-
-
+    @Override
+    protected void onDestroy() {
+        // Unregister since the activity is about to be closed.
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
+        super.onDestroy();
+    }
 }
