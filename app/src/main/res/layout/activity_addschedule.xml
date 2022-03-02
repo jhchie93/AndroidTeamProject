@@ -15,14 +15,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/border"
             android:hint="제목"
+            android:textColorHint="@color/black"
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/black"/>
 
         <!--시간 선택 레이아웃-->
         <LinearLayout
@@ -49,7 +51,8 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="시작"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -108,7 +111,8 @@
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
                     android:text="종료"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -168,16 +172,20 @@
             android:paddingBottom="5dp">
 
             <EditText
+                android:id="@+id/map_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
                 android:background="@android:color/transparent"
                 android:hint="장소"
+                android:textColorHint="@color/black"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
 
             <ImageButton
+                android:id="@+id/map_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="40"
@@ -187,12 +195,14 @@
                 android:src="@android:drawable/ic_search_category_default" />
         </LinearLayout>
 
-        <com.naver.maps.map.MapView
+        <fragment
             android:id="@+id/map_view"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp" />
+            android:layout_marginRight="15dp"
+            android:name="com.naver.maps.map.MapFragment"/>
+
         <!--    장소 선택 레이아웃 종료-->
 
         <!--    반복 설정 레이아웃-->
@@ -217,7 +227,8 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="반복"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -226,7 +237,8 @@
                 android:enabled="false"
                 android:hint="없음"
                 android:paddingRight="10dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
         </LinearLayout>
         <!--    반복 설정 레이아웃 종료-->
 
@@ -251,7 +263,8 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="알림"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
 
             <EditText
                 android:layout_width="wrap_content"
@@ -260,7 +273,8 @@
                 android:enabled="false"
                 android:hint="없음"
                 android:paddingRight="10dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
         </LinearLayout>
         <!--    알림 설정 레이아웃 종료-->
 
@@ -286,7 +300,8 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="색상"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="30dp"
@@ -324,9 +339,11 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:hint="메모"
+                android:textColorHint="@color/black"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
         </LinearLayout>
 
         <LinearLayout
@@ -339,13 +356,13 @@
                 android:id="@+id/bottom_navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:background="@color/light_grey"
                 app:itemBackground="@color/light_grey"
                 app:itemIconTint="#c1000000"
                 app:labelVisibilityMode="labeled"
                 app:layout_insetEdge="bottom"
-                app:menu="@menu/addschedule_bottombar" />
+                app:menu="@menu/addschedule_bottombar"
+                app:itemTextColor="@color/black" />
         </LinearLayout>
 
     </LinearLayout>

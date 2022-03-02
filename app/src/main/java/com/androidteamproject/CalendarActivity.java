@@ -1,10 +1,16 @@
 package com.androidteamproject;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.androidteamproject.decorator.MySelectorDecorator;
 import com.androidteamproject.decorator.OneDayDecorator;
@@ -21,10 +27,8 @@ import org.threeten.bp.format.DateTimeFormatter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-/**
- * Shows off the most basic usage
- */
 public class CalendarActivity extends AppCompatActivity
     implements OnDateSelectedListener, OnMonthChangedListener {
 
@@ -66,7 +70,6 @@ public class CalendarActivity extends AppCompatActivity
       @NonNull CalendarDay date,
       boolean selected) {
 
-
     oneDayDecorator.setDate(date);
     widget.invalidateDecorators();
 
@@ -79,5 +82,12 @@ public class CalendarActivity extends AppCompatActivity
   public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
     LocalDate localdate = LocalDate.of(date.getYear(), date.getMonth(), date.getDay());
     getSupportActionBar().setTitle(MONTH_FORMATTER.format(localdate));
+  }
+
+
+  @OnClick(R.id.floating_action_button)
+  void addScheduleActivity() {
+    Intent intent = new Intent(CalendarActivity.this, AddScheduleActivity.class);
+    startActivity(intent);
   }
 }

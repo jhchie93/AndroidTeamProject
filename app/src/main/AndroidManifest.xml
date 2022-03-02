@@ -6,9 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <meta-data
-        android:name="com.naver.maps.map.CLIENT_ID"
-        android:value="v1hn6l8pg7" />
+
 
     <application
         android:usesCleartextTraffic="true"
@@ -19,9 +17,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidTeamProject">
 
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="v1hn6l8pg7" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity
@@ -32,11 +39,6 @@
         <activity
             android:name=".AddScheduleActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
