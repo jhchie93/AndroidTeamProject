@@ -1,50 +1,33 @@
 package com.androidteamproject;
 
-import android.Manifest;
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.Point;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Display;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatRadioButton;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.androidteamproject.scheduler.ColorSelectorActivity;
+import com.androidteamproject.scheduler.RepaetSelectorActivity;
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
-
-import net.daum.mf.map.api.MapPoint;
-import net.daum.mf.map.api.MapReverseGeoCoder;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -84,14 +67,14 @@ public class AddScheduleActivity extends AppCompatActivity implements OnMapReady
         colorselector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AddScheduleActivity.this, color_selectorActivity.class));
+                startActivity(new Intent(AddScheduleActivity.this, ColorSelectorActivity.class));
             }
         });
 
         repeatselector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AddScheduleActivity.this, repaet_selectorActivity.class));
+                startActivity(new Intent(AddScheduleActivity.this, RepaetSelectorActivity.class));
             }
         });
 

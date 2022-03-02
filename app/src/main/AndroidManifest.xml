@@ -3,6 +3,12 @@
     package="com.androidteamproject">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <meta-data
+        android:name="com.naver.maps.map.CLIENT_ID"
+        android:value="v1hn6l8pg7" />
 
     <application
         android:usesCleartextTraffic="true"
@@ -14,18 +20,33 @@
         android:theme="@style/Theme.AndroidTeamProject">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
         </activity>
 
         <activity
             android:name=".CalendarActivity"
             android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".AddScheduleActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".scheduler.ColorSelectorActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".scheduler.RepaetSelectorActivity"
+            android:exported="true">
         </activity>
 
     </application>

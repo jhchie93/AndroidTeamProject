@@ -1,4 +1,4 @@
-package com.androidteamproject;
+package com.androidteamproject.scheduler;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import android.widget.LinearLayout;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.google.android.material.textfield.TextInputEditText;
+import com.androidteamproject.R;
 
-public class color_selectorActivity extends Activity {
+public class ColorSelectorActivity extends Activity {
     ImageView circle1, circle2, circle3;
     LinearLayout colorselect1, colorselect2, colorselect3;
     private String rgb;
@@ -39,20 +39,20 @@ public class color_selectorActivity extends Activity {
                     case R.id.colorselect1:
                         rgb = "#FF0000";
                         intent.putExtra("rgb",rgb);
-                        LocalBroadcastManager.getInstance(color_selectorActivity.this).sendBroadcast(intent);
+                        LocalBroadcastManager.getInstance(ColorSelectorActivity.this).sendBroadcast(intent);
                         finish();
                         break;
 
                     case R.id.colorselect2:
                         rgb = "#0000FF";
                         intent.putExtra("rgb",rgb);
-                        LocalBroadcastManager.getInstance(color_selectorActivity.this).sendBroadcast(intent);
+                        LocalBroadcastManager.getInstance(ColorSelectorActivity.this).sendBroadcast(intent);
                         finish();
                         break;
                     case R.id.colorselect3:
                         rgb = "#008000";
                         intent.putExtra("rgb",rgb);
-                        LocalBroadcastManager.getInstance(color_selectorActivity.this).sendBroadcast(intent);
+                        LocalBroadcastManager.getInstance(ColorSelectorActivity.this).sendBroadcast(intent);
                         finish();
                         break;
                 }

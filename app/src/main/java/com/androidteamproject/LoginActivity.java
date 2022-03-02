@@ -1,31 +1,24 @@
 package com.androidteamproject;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.androidteamproject.login.LoginRequest;
 import com.google.android.material.textfield.TextInputEditText;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     TextInputEditText editId, editPw;
     Button btnLogin;
@@ -34,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         editId = findViewById(R.id.edit_id);
         editPw = findViewById(R.id.edit_pw);
@@ -91,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         LoginRequest loginRequest = new LoginRequest(id, pw, responseListener, responseErrorListener);
-        RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
+        RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
         queue.add(loginRequest);
 
     }

@@ -1,4 +1,4 @@
-package com.androidteamproject;
+package com.androidteamproject.scheduler;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class repaet_selectorActivity extends Activity {
+import com.androidteamproject.R;
+
+public class RepaetSelectorActivity extends Activity {
     RadioButton btn_repeat1, btn_repeat2, btn_repeat3, btn_repeat4, btn_repeat5;
     TextView testView;
     RadioGroup btngroup_repeat;

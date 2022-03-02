@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/drawable/circle.xml" value="0.112" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/drawable/day_selector.xml" value="0.1625" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/drawable/example_1_selected_bg.xml" value="0.1815" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/drawable/example_1_today_bg.xml" value="0.1815" />
@@ -12,6 +13,7 @@
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/drawable/ic_baseline_crop_square_24.xml" value="0.1095" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/drawable/ic_square.xml" value="0.1095" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/drawable/ic_squre.xml" value="0.1" />
+        <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/activity_addschedule.xml" value="0.25" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/activity_basic.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/activity_calendar.xml" value="0.33" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/activity_calendar2.xml" value="0.21014492753623187" />
@@ -23,6 +25,7 @@
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/calendar_event_item_view.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/calendar_fragment.xml" value="0.17291666666666666" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/calendar_header.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/color_selector.xml" value="0.25" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/example_1_calendar_day.xml" value="0.25" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/example_1_fragment.xml" value="0.2" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/example_2_calendar_day.xml" value="0.17291666666666666" />
@@ -39,6 +42,10 @@
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/example_5_event_item_view.xml" value="0.18" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/example_5_fragment.xml" value="0.17291666666666666" />
         <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/item_day.xml" value="0.1875" />
+        <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/list_layout.xml" value="0.25" />
+        <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/map_search.xml" value="0.16875" />
+        <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/repeat_selector.xml" value="0.25" />
+        <entry key="..\:/Users/CJH/AndroidStudioProjects/AndroidTeamProject/app/src/main/res/layout/search.xml" value="0.2" />
       </map>
     </option>
   </component>

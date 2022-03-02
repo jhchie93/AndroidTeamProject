@@ -1,4 +1,4 @@
-package com.androidteamproject;
+package com.androidteamproject.scheduler;
 
 import java.util.List;
 
