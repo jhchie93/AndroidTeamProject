@@ -124,14 +124,14 @@ public class AddScheduleActivity extends AppCompatActivity implements OnMapReady
                     public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
                         try {
 
-                            Date d = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                            EditText startDate = (EditText) findViewById(R.id.startDate);
+                            startDate.setText(String.format("%d년 %d월 %d일",year,monthOfYear+1,dayOfMonth));
 
                         } catch (Exception e) {
 
                             e.printStackTrace();
 
                         }
-                        updateStartLabel();
                     }
                 }, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.getDatePicker().setCalendarViewShown(false);
@@ -151,19 +151,22 @@ public class AddScheduleActivity extends AppCompatActivity implements OnMapReady
                     public void onDateSet(DatePicker datePicker, int year, int monthOfYear, int dayOfMonth) {
                         try {
 
-                            Date d = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                            EditText endDate = (EditText) findViewById(R.id.endDate);
+                            endDate.setText(String.format("%d년 %d월 %d일",year,monthOfYear+1,dayOfMonth));
+
 
                         } catch (Exception e) {
 
                             e.printStackTrace();
 
                         }
-                        updateEndLabel();
+
                     }
                 }, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.getDatePicker().setCalendarViewShown(false);
                 datePickerDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
                 datePickerDialog.show();
+
             }
         });
 //        종료 날짜 설정 종료
@@ -238,22 +241,6 @@ public class AddScheduleActivity extends AppCompatActivity implements OnMapReady
         });
 //        종료 시간 설정 종료
 
-    }
-
-    private void updateStartLabel() {
-        String myFormat = "yyyy년 MM월 dd일";    // 출력형식   2018/11/28
-        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.KOREA);
-
-        EditText startDate = (EditText) findViewById(R.id.startDate);
-        startDate.setText(sdf.format(myCalendar.getTime()));
-    }
-
-    private void updateEndLabel() {
-        String myFormat = "yyyy년 MM월 dd일";    // 출력형식   2018/11/28
-        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.KOREA);
-
-        EditText endDate = (EditText) findViewById(R.id.endDate);
-        endDate.setText(sdf.format(myCalendar.getTime()));
     }
 
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
