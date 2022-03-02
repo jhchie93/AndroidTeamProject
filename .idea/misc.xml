@@ -5,13 +5,22 @@
       <map>
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3545" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/drawable/border.xml" value="0.3135" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/drawable/btn_repeat.xml" value="0.311" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/drawable/circle.xml" value="0.3135" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3545" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/drawable/img.xml" value="0.3135" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/activity_addschedule.xml" value="0.22" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/activity_main.xml" value="0.5494791666666666" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/color_selector.xml" value="0.33" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/kakaotest.xml" value="0.3072916666666667" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/list_layout.xml" value="0.29814814814814816" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/map_search.xml" value="0.25" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/repeat_selector.xml" value="0.22" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/scrolltest.xml" value="0.27037037037037037" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/layout/search.xml" value="0.29814814814814816" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/menu/addschedule_bottombar.xml" value="0.2760416666666667" />
         <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/menu/addschedule_topbar.xml" value="0.5494791666666666" />
+        <entry key="..\:/java404/android/AndroidTeamProject/app/src/main/res/xml/network_security_config.xml" value="0.18796296296296297" />
       </map>
     </option>
   </component>

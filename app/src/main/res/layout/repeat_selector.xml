@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/repeatpopup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:src="@drawable/repeat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:text="반복 일정인가요?" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/btngroup_repeat">
+
+        <Button
+            android:id="@+id/btn_repeat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:checked="true"
+            android:gravity="center"
+            android:background="@drawable/btn_repeat"
+            android:button="@android:color/transparent"
+            android:onClick="onRadioButtonClicked"
+            android:text="없음" />
+
+        <Button
+            android:id="@+id/btn_repeat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:checked="false"
+            android:gravity="center"
+            android:background="@drawable/btn_repeat"
+            android:button="@android:color/transparent"
+            android:onClick="onRadioButtonClicked"
+            android:text="매일" />
+
+        <Button
+            android:id="@+id/btn_repeat3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:checked="false"
+            android:gravity="center"
+            android:background="@drawable/btn_repeat"
+            android:button="@android:color/transparent"
+            android:onClick="onRadioButtonClicked"
+            android:text="매주" />
+
+        <Button
+            android:id="@+id/btn_repeat4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:checked="false"
+            android:gravity="center"
+            android:background="@drawable/btn_repeat"
+            android:button="@android:color/transparent"
+            android:onClick="onRadioButtonClicked"
+            android:text="매달" />
+
+        <Button
+            android:id="@+id/btn_repeat5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:checked="false"
+            android:gravity="center"
+            android:background="@drawable/btn_repeat"
+            android:button="@android:color/transparent"
+            android:onClick="onRadioButtonClicked"
+            android:text="매년" />
+    </RadioGroup>
+</LinearLayout>
