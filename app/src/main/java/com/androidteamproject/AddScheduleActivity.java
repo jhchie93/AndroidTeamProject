@@ -37,17 +37,26 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraPosition;
+import com.naver.maps.map.MapView;
+import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.OnMapReadyCallback;
+
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.MapReverseGeoCoder;
-import net.daum.mf.map.api.MapView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class AddScheduleActivity extends AppCompatActivity {
-    LinearLayout colorselector, repeatselector;
+public class AddScheduleActivity extends AppCompatActivity implements OnMapReadyCallback{
+    private MapView mapView;
+    private static NaverMap naverMap;
+    private LatLng myLatLng = new LatLng( 35.157669005046806, 129.05917776102285);
+
+   LinearLayout colorselector, repeatselector;
     Calendar myCalendar = Calendar.getInstance();
     private String getString;
     ImageView maincircle;
@@ -64,10 +73,10 @@ public class AddScheduleActivity extends AppCompatActivity {
         getString = intent.getStringExtra("rgb");
         maincircle = (ImageView) findViewById(R.id.maincircle);
 
+        mapView = (MapView) findViewById(R.id.map_view);
+        mapView.getMapAsync(this);
 
         ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
-        MapView mapView = new MapView(this);
-        mapViewContainer.addView(mapView);
 
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver,
                 new IntentFilter("rgbEvent"));
@@ -241,5 +250,12 @@ public class AddScheduleActivity extends AppCompatActivity {
         // Unregister since the activity is about to be closed.
         LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
         super.onDestroy();
+    }
+    @Override
+    public void onMapReady(@NonNull NaverMap naverMap) {
+        this.naverMap = naverMap;
+
+        CameraPosition cameraPosition = new CameraPosition(myLatLng, 16);
+        naverMap.setCameraPosition(cameraPosition);
     }
 }
