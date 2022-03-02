@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_grey"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:hint="제목"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <!--시간 선택 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:orientation="vertical"
+
+            android:paddingBottom="10dp">
+            <!--시작 시간 선택 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="시작"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/startDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"
+                        android:text="시작 날짜"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/startTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"
+                        android:text="시작 시간"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--시작 시간 선택 레이아웃 종료-->
+
+            <!--종료 시간 선택 레이아웃-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="종료"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/endDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"
+                        android:text="종료 날짜"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/endTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"
+                        android:text="종료 시간"
+                        android:clickable="true"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--종료 시간 선택 레이아웃 종료-->
+        </LinearLayout>
+        <!--시간 선택 레이아웃 종료-->
+
+        <!--    장소 선택 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@android:color/transparent"
+                android:hint="장소"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="40"
+                android:background="@android:color/transparent"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:src="@android:drawable/ic_search_category_default" />
+        </LinearLayout>
+
+        <com.naver.maps.map.MapView
+            android:id="@+id/map_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+        <!--    장소 선택 레이아웃 종료-->
+
+        <!--    반복 설정 레이아웃-->
+        <LinearLayout
+            android:id="@+id/repeatselector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="반복"
+                android:textSize="15sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:hint="없음"
+                android:paddingRight="10dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--    반복 설정 레이아웃 종료-->
+
+        <!--    알림 설정 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="알림"
+                android:textSize="15sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:hint="없음"
+                android:paddingRight="10dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--    알림 설정 레이아웃 종료-->
+
+        <!--    색상 설정 레이아웃-->
+        <LinearLayout
+            android:id="@+id/colorselector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="색상"
+                android:textSize="15sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="75dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/circle"
+                    android:id="@+id/maincircle"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <!--    색상 설정 레이아웃 종료-->
+
+        <!--    메모 작성 레이아웃-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/border"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="메모"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_grey"
+            android:orientation="horizontal">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/light_grey"
+                app:itemBackground="@color/light_grey"
+                app:itemIconTint="#c1000000"
+                app:labelVisibilityMode="labeled"
+                app:layout_insetEdge="bottom"
+                app:menu="@menu/addschedule_bottombar" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
