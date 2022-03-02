@@ -28,7 +28,16 @@
             </intent-filter>
 
         </activity>
+        <activity
+            android:name=".repaet_selectorActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
 
+        </activity>
+        <activity
+            android:name=".color_selectorActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
+
+        </activity>
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="8ab011da5a2e98031529835fe03de90e" />
