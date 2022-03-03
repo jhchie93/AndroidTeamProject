@@ -43,11 +43,13 @@
 
         <activity
             android:name=".scheduler.ColorSelectorActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"
             android:exported="true">
         </activity>
 
         <activity
             android:name=".scheduler.RepaetSelectorActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"
             android:exported="true">
         </activity>
 

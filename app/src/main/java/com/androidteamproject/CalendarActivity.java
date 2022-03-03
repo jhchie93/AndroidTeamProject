@@ -73,15 +73,15 @@ public class CalendarActivity extends AppCompatActivity
     oneDayDecorator.setDate(date);
     widget.invalidateDecorators();
 
-    LocalDate localdate = LocalDate.of(date.getYear(), date.getMonth(), date.getDay());
+    LocalDate localdate = LocalDate.of(date.getYear(), date.getMonth() + 1, date.getDay());
     textView.setText(selected ? FORMATTER.format(localdate): "선택없음");
 
   }
 
   @Override
   public void onMonthChanged(MaterialCalendarView widget, CalendarDay date) {
-    LocalDate localdate = LocalDate.of(date.getYear(), date.getMonth(), date.getDay());
-    getSupportActionBar().setTitle(MONTH_FORMATTER.format(localdate));
+    LocalDate localdate = LocalDate.of(date.getYear(), date.getMonth() + 1, date.getDay());
+    //getSupportActionBar().setTitle(MONTH_FORMATTER.format(localdate));
   }
 
 
